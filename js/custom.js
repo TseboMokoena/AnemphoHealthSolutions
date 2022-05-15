@@ -38,7 +38,7 @@ $(".client_owl-carousel").owlCarousel({
 
 /** google_map js **/
 function myMap() {
-    var myLatlng = new google.maps.LatLng(-26.286080, 28.251220);
+    var myLatlng = new google.maps.LatLng(-26.2673525,28.3322392);
     var mapProp = {
         center: myLatlng,
 	       	zoom:18,
@@ -68,7 +68,13 @@ function myMap() {
 			  }
 			]
         
-    };
+    
+     };
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        title:"Anempho Health"
+    });
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    marker.SetMap(map)
     return map
 }
